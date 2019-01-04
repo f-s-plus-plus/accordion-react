@@ -25,12 +25,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <!-- Font Awesome CDN -->
+                {// Font Awesome CDN }
                 <link rel="stylesheet" 
                 href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
                 integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
                 crossOrigin="anonymous"  />
-                <!-- Accordion Component -->
+                {// Accordion Component }
                 <Accordion title={titleToBePassed} description={descriptionToBePassed} />
             </div>
         );
