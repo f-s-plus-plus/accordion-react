@@ -6,9 +6,10 @@ An accordion that was created with css and React. Use it in your projects.
 Pass a string (this.props.title) to give the accordion a title and an object (this.props.description) in the following format to populate the lines of the accordion
 
 ```javascript
-
+//title 
 let titleToBePassed = "Title of the Accordion";
 
+//description
 let descriptionToBePassed = { item1 : { 
                               name : "ITEM 1", 
                               link : "https//link.com"
@@ -18,12 +19,17 @@ let descriptionToBePassed = { item1 : {
                             }
                   };
                   
+//Main App                  
 class App extends Component {
 
     render() {
         return (
             <div className="App">
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossOrigin="anonymous"  />
+                <!-- Font Awesome CDN -->
+                <link rel="stylesheet" 
+                href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+                integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossOrigin="anonymous"  />
+                <!-- Accordion Component -->
                 <Accordion title={titleToBePassed} description={descriptionToBePassed} />
             </div>
         );
