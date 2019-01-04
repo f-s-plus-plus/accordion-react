@@ -44,7 +44,7 @@ class Accordion extends Component {
         Object.keys(description).forEach(key => {
             //checks to see if the anchor is going to a link or empty button
             let anchor;
-            if(description[key].link === "") {
+            if(description[key].link == "") {
                 anchor = <button className="empty-anchor-custom"> {description[key].name} </button>;
             }
             else {
