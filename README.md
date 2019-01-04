@@ -40,3 +40,7 @@ class App extends Component {
 ```
 
 Item 1 will have an anchor with a href of https//link.com while item 2 will be an empty button with no href.
+
+#### Example
+
+![image](https://imgur.com/tWaQBdX)
