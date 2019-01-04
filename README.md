@@ -43,4 +43,4 @@ Item 1 will have an anchor with a href of https//link.com while item 2 will be a
 
 #### Example
 
-![image](https://imgur.com/tWaQBdX)
+![image](https://i.imgur.com/tWaQBdX.png)
