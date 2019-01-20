@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 //accordion components that load after the bio
-class Accordion extends Component {
+class Accordion extends React.Component {
 
     constructor(props) {
         super(props);
@@ -44,11 +44,11 @@ class Accordion extends Component {
         Object.keys(description).forEach(key => {
             //checks to see if the anchor is going to a link or empty button
             let anchor;
-            if(description[key].link == "") {
+            if(description[key].link == null) {
                 anchor = <button className="empty-anchor-custom"> {description[key].name} </button>;
             }
             else {
-                anchor = <a className="anchors-custom" href={description[key].link}> {description[key].name} </a>
+                anchor = <a className="anchor-custom" href={description[key].link}> {description[key].name} </a>
             }
 
             //pushes it to that initially empty
@@ -66,14 +66,12 @@ class Accordion extends Component {
     render() {
         return (
             <div className="post">
-                <div>
-                    <button className="post-head" onClick={this.toggle}>
-                        {this.props.title}
-                        <i className="fas fa-caret-down padding-left" />
-                    </button>
-                    {this.createAccordionContent()}
-                    <div className={this.state.isOpen ? 'div-fill' : 'div-no-fill'}>
-                    </div>
+                <button className="post-head" onClick={this.toggle}>
+                    {this.props.title}
+                    <span className='caret-down'> </span>
+                </button>
+                {this.createAccordionContent()}
+                <div className={this.state.isOpen ? 'div-fill' : 'div-no-fill'}>
                 </div>
             </div>
         );
